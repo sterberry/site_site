@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOTik</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0f14;
+    color: #ffffff;
+}
+
+/* ===== Header ===== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #33e1c3;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #33e1c3;
+}
+
+.ai-badge {
+    background: #f0d54d;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* ===== Hero Section ===== */
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: #3a3f45;
+    border-radius: 40px;
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero img {
+    width: 420px;
+    height: 420px;
+    object-fit: contain;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    font-weight: 500;
+    color: #33e1c3;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #cfd3d7;
+    font-size: 18px;
+    max-width: 420px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tag {
+    background: #33e1c3;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 25px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== Pricing Section ===== */
+
+.pricing {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #1b1f25;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    border: 1px solid #2a2f36;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #33e1c3;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #33e1c3;
+    color: #33e1c3;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #33e1c3;
+    color: #000;
+}
+
+.popular {
+    border: 1px solid #33e1c3;
+}
+
+.popular-label {
+    background: #33e1c3;
+    color: #000;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">BOTik</div>
+    <nav>
+        <a href="#">Услуги</a>
+        <a href="#">Контакты</a>
+        <a href="#">Бот-ассистент</a>
+        <span class="ai-badge">AI</span>
+        <a href="#">Кабинет</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="https://play-lh.googleusercontent.com/W_wgsbGrpjB81QTCkfWHtkm3Er3yzv-zaBsBJCVFtFHbr2tt8Rn4uZPht-bG63xbn4k" alt="Botik Image">
+
+    <div class="hero-content">
+        <h1>BOTik</h1>
+        <p>
+            Даём возможность решать общие задачи для нескольких серверов одновременно
+        </p>
+
+        <div class="tags">
+            <div class="tag">автоматизация</div>
+            <div class="tag">искусственный интеллект</div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing">
+    <h2>Выберите тариф</h2>
+
+    <div class="cards">
+        <div class="card">
+          <h3>Подписка на месяц</h3>
+            <p>Базовые функции</p>
+            <div class="price">0 руб/мес</div>
+            <a href="#" class="button">Оплатить →</a>
+        </div>
+
+        <div class="card popular">
+            <div class="popular-label">Популярно</div>
+            <h3>Подписка на месяц</h3>
+            <p>Базовые функции + дополнительные возможности</p>
+            <div class="price">1200 руб/мес</div>
+            <a href="#" class="button">Оплатить →</a>
+        </div>
+
+        <div class="card">
+            <h3>Подписка на год</h3>
+            <p>Базовые функции + доп. возможности</p>
+            <div class="price">12000 руб/год</div>
+            <a href="#" class="button">Оплатить →</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
